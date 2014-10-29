@@ -1,0 +1,45 @@
+                                        <div class="clearfix">
+                                        <ul id="sparks" class="">
+                                            <li class="sparks-info">
+                                                <h5> Revenue <span>{{money revenue}}</span></h5>
+                                            </li>
+                                            <li class="sparks-info">
+                                                <h5>Borrows<span>{{borrows}}</span></h5>
+                                            </li>
+                                            <li class="sparks-info">
+                                                <h5>Sales<span>{{sales}}</span></h5>
+                                            </li>
+                                        </ul>
+                                        <ul class="bestsellers">
+                                            {{#each bestsellers}}
+                                            <li>
+                                                <img src="https://images-na.ssl-images-amazon.com/images/P/{{this}}.01._SL150_.jpg" />
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                        </div>
+                                        <br class="clearfix"/>
+
+										<div class="custom-scroll table-responsive" style="height:290px; overflow-y: scroll;">
+                                        <table id="titles-{{id}}" class="table table-striped table-bordered table-hover" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Title</th>
+                                                    <th>Revenue</th>
+                                                    <th>Borrows</th>
+                                                    <th>Sales</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {{#each titles}}
+                                                <tr>
+                                                    <td>{{title}}</td>
+                                                    <td nowrap align="right">{{money revenue}}</td>
+                                                    <td nowrap align="right">{{borrows}}</td>
+                                                    <td nowrap align="right">{{sales}}</td>
+                                                </tr>
+                                                {{/each}}
+                                            </tbody>
+                                        </table>
+                                        </div>
+

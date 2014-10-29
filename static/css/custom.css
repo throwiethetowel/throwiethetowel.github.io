@@ -1,0 +1,87 @@
+ul.top-nav {
+    display: inline-block;
+    padding: 40px 28px 25px 0;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    line-height: .5em;
+    list-style: none;
+    position: relative;
+}
+
+ul.top-nav li {
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+
+position: relative;
+height: auto!important;
+padding: 0!important;
+display: inline-block;
+float: left;
+overflow: visible;
+}
+ul.top-nav li:first-child {
+    margin-left: 0;
+}
+
+ul.top-nav li:hover {
+background: #2e3e57;
+border-right-color: #fff;
+border-left-color: #fff;
+}
+
+ul.top-nav li.active a {
+    color: #202427;
+font-weight: 700;
+
+}
+ul.top-nav li:hover a {
+    color: #F1F1F1;
+}
+
+ul.top-nav li a {
+text-shadow: none!important;
+padding: 10px 9px!important;
+
+display: inline-block;
+height: 47px;
+line-height: 22px;
+color: #69737A;
+}
+
+.menu-on-top #main {
+    margin-top: 0!important;
+}
+
+#sparks {
+    text-align: left;
+}
+
+
+ul.bestsellers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+ul.bestsellers img {
+    display: block;
+}
+ul.bestsellers li {
+    float: left;
+    margin-left: 15px;
+}
+ul.bestsellers li:first-child {
+    margin-left: 0;
+}
+
+ul.bestsellers li h5 {
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+}
+
+
+.goals-widget {
+    min-height: 310px;
+}
