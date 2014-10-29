@@ -31,7 +31,7 @@ if (!Array.prototype.reduce) {
 }
 
 (function() {
-    var host = "https://throwiethetowel.github.io/kdp-plus/static/";
+    var host = "https://throwiethetowel.github.io/static/";
     var BORROW_RATE = 1.52;
     var EXCHANGE_RATE = {
         "USD": 1,
