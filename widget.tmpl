@@ -13,7 +13,7 @@
                                         <ul class="bestsellers">
                                             {{#each bestsellers}}
                                             <li>
-                                                <img src="https://images-na.ssl-images-amazon.com/images/P/{{this}}.01._SL150_.jpg" />
+                                                <a href="http://www.amazon.com/dp/{{this}}"><img src="https://images-na.ssl-images-amazon.com/images/P/{{this}}.01._SL150_.jpg" /></a>
                                             </li>
                                             {{/each}}
                                         </ul>
@@ -33,7 +33,7 @@
                                             <tbody>
                                                 {{#each titles}}
                                                 <tr>
-                                                    <td>{{title}}</td>
+                                                    <td><a href="http://www.amazon.com/dp/{{asin}}">{{title}}</a></td>
                                                     <td nowrap align="right">{{money revenue}}</td>
                                                     <td nowrap align="right">{{borrows}}</td>
                                                     <td nowrap align="right">{{sales}}</td>

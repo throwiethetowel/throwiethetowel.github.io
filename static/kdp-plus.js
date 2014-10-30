@@ -31,7 +31,9 @@ if (!Array.prototype.reduce) {
 }
 
 (function() {
-    var host = "https://throwiethetowel.github.io/static/";
+    var host = "https://selfpubtech.github.io/kdp-plus/static/";
+    //host = "http://localhost:5555/";
+
     var BORROW_RATE = 1.52;
     var EXCHANGE_RATE = {
         "USD": 1,
@@ -106,9 +108,9 @@ if (!Array.prototype.reduce) {
                 return b.revenue - a.revenue;
             });
 
-            var totalRevenue = sales.map(function(b) { return b.revenue } ).reduce(sum);
-            var totalSales = sales.map(function(b) { return b.sales } ).reduce(sum);
-            var totalBorrows = sales.map(function(b) { return b.borrows } ).reduce(sum);
+            var totalRevenue = sales.map(function(b) { return b.revenue } ).reduce(sum, 0);
+            var totalSales = sales.map(function(b) { return b.sales } ).reduce(sum, 0);
+            var totalBorrows = sales.map(function(b) { return b.borrows } ).reduce(sum, 0);
 
             var widgetContainerId = "#" + id + "-widget";
             $(widgetContainerId).empty().append(Handlebars.templates['widget.tmpl']({
@@ -136,8 +138,8 @@ if (!Array.prototype.reduce) {
             }
         }).pipe(function(data) {
             data = JSON.parse(data);
-            var borrows = data.borrowData.reduce(sum);
-            var sales = data.orderData.reduce(sum);
+            var borrows = data.borrowData.reduce(sum, 0);
+            var sales = data.orderData.reduce(sum, 0);
             return {
                 asin: book.asin,
                 title: book.title,

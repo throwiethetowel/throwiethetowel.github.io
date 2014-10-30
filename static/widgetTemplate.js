@@ -2,14 +2,18 @@
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
 templates['widget.tmpl'] = template({"1":function(depth0,helpers,partials,data) {
   var lambda=this.lambda, escapeExpression=this.escapeExpression;
-  return "                                            <li>\n                                                <img src=\"https://images-na.ssl-images-amazon.com/images/P/"
+  return "                                            <li>\n                                                <a href=\"http://www.amazon.com/dp/"
     + escapeExpression(lambda(depth0, depth0))
-    + ".01._SL150_.jpg\" />\n                                            </li>\n";
+    + "\"><img src=\"https://images-na.ssl-images-amazon.com/images/P/"
+    + escapeExpression(lambda(depth0, depth0))
+    + ".01._SL150_.jpg\" /></a>\n                                            </li>\n";
 },"3":function(depth0,helpers,partials,data) {
   var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
-  return "                                                <tr>\n                                                    <td>"
+  return "                                                <tr>\n                                                    <td><a href=\"http://www.amazon.com/dp/"
+    + escapeExpression(((helper = (helper = helpers.asin || (depth0 != null ? depth0.asin : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"asin","hash":{},"data":data}) : helper)))
+    + "\">"
     + escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
-    + "</td>\n                                                    <td nowrap align=\"right\">"
+    + "</a></td>\n                                                    <td nowrap align=\"right\">"
     + escapeExpression(((helpers.money || (depth0 && depth0.money) || helperMissing).call(depth0, (depth0 != null ? depth0.revenue : depth0), {"name":"money","hash":{},"data":data})))
     + "</td>\n                                                    <td nowrap align=\"right\">"
     + escapeExpression(((helper = (helper = helpers.borrows || (depth0 != null ? depth0.borrows : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"borrows","hash":{},"data":data}) : helper)))
