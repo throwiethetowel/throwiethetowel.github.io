@@ -31,7 +31,7 @@ if (!Array.prototype.reduce) {
 }
 
 (function() {
-    var host = "https://selfpubtech.github.io/kdp-plus/static/";
+    var host = "https://throwiethetowel.github.io/static/";
     //host = "http://localhost:5555/";
 
     var BORROW_RATE = 1.52;
