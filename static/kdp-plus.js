@@ -169,5 +169,5 @@ if (!Array.prototype.reduce) {
     function dateToString(date) {
         return [date.getFullYear(), date.getMonth()+1, date.getDate()].join("-");
     }
-interval = setInterval(fillData, 300000);
+interval = setInterval(renderSalesWidget, 300000);
 })();
