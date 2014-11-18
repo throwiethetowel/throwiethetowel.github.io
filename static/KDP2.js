@@ -14,7 +14,7 @@ function getASINs() {
 	fillData();
 	$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">');
 	$('#reportInfoArea').append("<hr><hr><div><center><span id=\"count\"></span></center></div>");
-	$('#reportInfoArea').append("<div><h3 class='totals text-center' style='display:none'>Today you've earned around $<span id='dollas'></span> USD from <span id='totalSales'></span> sales and <span id='totalBorrows'></span> borrows.</h3></div>")
+	$('#reportInfoArea').append("<div><h1 class='totals text-center' style='display:none'>Today: $<span id='dollas'></span> USD - <span id='totalSales'></span> Sales - <span id='totalBorrows'></span> Borrows</h1></div>")
 	$('#reportInfoArea').append("<table id=\"sales\" class=\"table table-striped\"><thead><th>Title</th><th>USD</th><th>Sales+Borrows</th><th>Sales</th><th>Borrows</th></thead><tbody class=\"data\"></tbody></table>");
 	$('#reportHolder').append("<pre id=\"redSales\">|Title|USD|Sales+Borrows|Sales|Borrows|<br>|:-|:-:|:-:|:-:|:-:|<br></pre>")
 }
