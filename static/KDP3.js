@@ -15,7 +15,7 @@ function getASINs() {
 	$('head').append('<link rel="stylesheet" href="http://throwiethetowel.github.io/slabText/js/jquery.slabtext.js">');
 	$('head').append('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">');
 	$('#reportInfoArea').append("<hr><hr><div><center><span id=\"count\"></span></center></div>");
-	$('#reportInfoArea').append("<div></span> USD"><span class="slabtext">For one night only</span> <span class="slabtext">Jackie Mittoo</span> <span class="slabtext">with special Studio One guests</span> <span class="slabtext">Dillinger <span class="amp">&amp;</span> Lone Ranger</span></h1></div>")
+	$('#reportInfoArea').append("<div><span class="slabtext">For one night only</span></div>")
 	$('#reportInfoArea').append("<table id=\"sales\" class=\"table table-striped\"><thead><th>Title</th><th>USD</th><th>Sales+Borrows</th><th>Sales</th><th>Borrows</th></thead><tbody class=\"data\"></tbody></table>");
 	$('#reportHolder').append("<pre id=\"redSales\">|Title|USD|Sales+Borrows|Sales|Borrows|<br>|:-|:-:|:-:|:-:|:-:|<br></pre>")
 }
