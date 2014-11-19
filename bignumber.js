@@ -1,7 +1,7 @@
 $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://throwiethetowel.github.io/bignumbercss.css\">');
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
-var intervalInMinutes = 1;
+var intervalInMinutes = 5;
 var borrowRate = 1.33;
 
 function fetch() {
