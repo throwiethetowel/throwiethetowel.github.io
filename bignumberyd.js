@@ -6,7 +6,20 @@ var borrowRate = 1.39;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
-	var today = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate();
+	function gimmeYesterday(toAdd) {
+            if (!toAdd || toAdd == '' || isNaN(toAdd)) return;
+            var d = new Date();
+            console.log(d);
+            d.setDate(d.getDate() - parseInt(toAdd));
+var yesterDAY = (d.getFullYear() +1) + "-" + d.getMonth() + "-" + d.getDate();
+    
+$("#endDate").html(yesterDAY);
+        }
+$(document).ready(function() {
+    
+gimmeYesterday(3);
+    
+});
 	$.ajax({
 		url: 'https://kdp.amazon.com/reports/data',
 		data: {
@@ -15,8 +28,8 @@ function fetch() {
 			type: "OBR",
 			marketplaces: "all",
 			asins: '',
-			startDate: today,
-			endDate: today
+			startDate: yesterDAY,
+			endDate: yesterDAY
 		},
 		success: function(data) {
 			data = JSON.parse(data);
