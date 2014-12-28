@@ -6,7 +6,7 @@ var borrowRate = 1.39;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
-	var today = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate() - 24*60*60*1000;
+	var today = 2014-12-27;
 	$.ajax({
 		url: 'https://kdp.amazon.com/reports/data',
 		data: {
