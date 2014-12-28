@@ -6,36 +6,28 @@ var borrowRate = 1.39;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
-	function gimmeYesterday(toAdd) {
-if (!toAdd || toAdd == '' || isNaN(toAdd)) return;
-var d = new Date();
-console.log(d);
-d.setDate(d.getDate() - parseInt(toAdd));
-var yesterDAY = (d.getFullYear() +1) + "-" + d.getMonth() + "-" + d.getDate();
-gimmeYesterday(3);
-    
-});
+	var today = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate()-1;
 	$.ajax({
-	url: 'https://kdp.amazon.com/reports/data',
-	data: {
-	customerID: init.toString().substr(init.toString().indexOf("customerID")+14).split('\"')[0],
-	sessionID: "sessionK",
-	type: "OBR",
-	marketplaces: "all",
-	asins: '',
-	startDate: d,
-	endDate: d
-	},
-	success: function(data) {
-	data = JSON.parse(data);
-	var dollars = aaDataToUSD(data.aaData, data.borrowData[0]);
-	var str = '$' + Number(dollars).toFixed(2);
+		url: 'https://kdp.amazon.com/reports/data',
+		data: {
+			customerID: init.toString().substr(init.toString().indexOf("customerID")+14).split('\"')[0],
+			sessionID: "sessionK",
+			type: "OBR",
+			marketplaces: "all",
+			asins: '',
+			startDate: today,
+			endDate: today
+		},
+		success: function(data) {
+			data = JSON.parse(data);
+			var dollars = aaDataToUSD(data.aaData, data.borrowData[0]);
+			var str = '$' + Number(dollars).toFixed(2);
       console.log(str);
-	$('td').html(str);
-	},
-	error: function(err) {
-	console.log('Error: ' + err);
-	}
+			$('td').html(str);
+		},
+		error: function(err) {
+			console.log('Error: ' + err);
+		}
 	});
 }
 
