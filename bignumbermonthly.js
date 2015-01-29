@@ -1,4 +1,4 @@
-$('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://rosenau.neocities.org/bignumbercss.css\">');
+$('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://throwiethetowel.github.io/bignumbercss.css\">');
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
 var intervalInMinutes = 5;
