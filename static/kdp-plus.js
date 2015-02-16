@@ -42,7 +42,7 @@ if (!Array.prototype.reduce) {
         "JPY": 0.0084,
         "INR": 0.016,
         "CAD": 0.80,
-        "BRL": 0.4,
+        "BRL": 0.35,
         "MXN": 0.074,
         "AUD": 0.76
     };
