@@ -62,7 +62,7 @@ function aaDataToUSD(aaData, borrowCount) {
 				dollars += Number(aaData[y][1])*0.35;
 				break;
 			case 'MXN':
-				dollars += Number(aaData[y][1])*0.074;
+				dollars += Number(aaData[y][1])*0.067;
 				break;
 			case 'AUD':
 				dollars += Number(aaData[y][1])*0.76;
