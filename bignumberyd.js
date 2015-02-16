@@ -39,28 +39,28 @@ function aaDataToUSD(aaData, borrowCount) {
 				dollars += Number(aaData[y][1]);
 				break;
 			case 'GBP':
-				dollars += Number(aaData[y][1])*1.6;
+				dollars += Number(aaData[y][1])*1.54;
 				break;
 			case 'EUR':
-				dollars += Number(aaData[y][1])*1.25;
+				dollars += Number(aaData[y][1])*1.14;
 				break;
 			case 'JPY':
-				dollars += Number(aaData[y][1])*0.0088;
+				dollars += Number(aaData[y][1])*0.0084;
 				break;
 			case 'INR':
 				dollars += Number(aaData[y][1])*0.016;
 				break;
 			case 'CAD':
-				dollars += Number(aaData[y][1])*0.88;
+				dollars += Number(aaData[y][1])*0.80;
 				break;
 			case 'BRL':
-				dollars += Number(aaData[y][1])*0.4;
+				dollars += Number(aaData[y][1])*0.35;
 				break;
 			case 'MXN':
-				dollars += Number(aaData[y][1])*0.074;
+				dollars += Number(aaData[y][1])*0.067;
 				break;
 			case 'AUD':
-				dollars += Number(aaData[y][1])*0.87;
+				dollars += Number(aaData[y][1])*0.76;
 				break;
 		}
 	}
