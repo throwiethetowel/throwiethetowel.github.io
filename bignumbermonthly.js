@@ -2,7 +2,7 @@ $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://thro
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
 var intervalInMinutes = 5;
-var borrowRate = 1.38;
+var borrowRate = 1.41;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
