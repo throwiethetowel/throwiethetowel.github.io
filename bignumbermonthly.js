@@ -2,7 +2,7 @@ $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://thro
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
 var intervalInMinutes = 5;
-var borrowRate = 1.41;
+var borrowRate = 1.406;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
@@ -44,25 +44,25 @@ function aaDataToUSD(aaData, borrowCount) {
 				dollars += Number(aaData[y][1]);
 				break;
 			case 'GBP':
-				dollars += Number(aaData[y][1])*1.54;
+				dollars += Number(aaData[y][1])*1.48;
 				break;
 			case 'EUR':
-				dollars += Number(aaData[y][1])*1.14;
+				dollars += Number(aaData[y][1])*1.06;
 				break;
 			case 'JPY':
-				dollars += Number(aaData[y][1])*0.0084;
+				dollars += Number(aaData[y][1])*0.0082;
 				break;
 			case 'INR':
 				dollars += Number(aaData[y][1])*0.016;
 				break;
 			case 'CAD':
-				dollars += Number(aaData[y][1])*0.80;
+				dollars += Number(aaData[y][1])*0.78;
 				break;
 			case 'BRL':
-				dollars += Number(aaData[y][1])*0.35;
+				dollars += Number(aaData[y][1])*0.31;
 				break;
 			case 'MXN':
-				dollars += Number(aaData[y][1])*0.067;
+				dollars += Number(aaData[y][1])*0.065;
 				break;
 			case 'AUD':
 				dollars += Number(aaData[y][1])*0.76;
