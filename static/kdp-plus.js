@@ -37,13 +37,13 @@ if (!Array.prototype.reduce) {
     var BORROW_RATE = 1.406;
     var EXCHANGE_RATE = {
         "USD": 1,
-        "GBP": 1.54,
-        "EUR": 1.14,
-        "JPY": 0.0084,
+        "GBP": 1.48,
+        "EUR": 1.06,
+        "JPY": 0.0082,
         "INR": 0.016,
-        "CAD": 0.80,
-        "BRL": 0.35,
-        "MXN": 0.074,
+        "CAD": 0.78,
+        "BRL": 0.31,
+        "MXN": 0.065,
         "AUD": 0.76
     };
 
