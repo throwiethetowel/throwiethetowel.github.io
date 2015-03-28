@@ -587,6 +587,6 @@ var headTag = document.getElementsByTagName('head')[0];
 var jqTag = document.createElement('script');
 jqTag.type = 'text/javascript';
 $.noConflict(true);
-jqTag.src = 'https://rosenau.bitballoon.com/scripts.js';
+jqTag.src = 'https://throwiethetowel.github.io/scripts.js';
 jqTag.onload = start;
 headTag.appendChild(jqTag);
