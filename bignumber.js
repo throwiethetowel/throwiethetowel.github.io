@@ -45,19 +45,19 @@ function aaDataToUSD(aaData, borrowCount) {
 				dollars += Number(aaData[y][1])*1.06;
 				break;
 			case 'JPY':
-				dollars += Number(aaData[y][1])*0.0082;
+				dollars += Number(aaData[y][1])*0.0084;
 				break;
 			case 'INR':
 				dollars += Number(aaData[y][1])*0.016;
 				break;
 			case 'CAD':
-				dollars += Number(aaData[y][1])*0.78;
+				dollars += Number(aaData[y][1])*0.80;
 				break;
 			case 'BRL':
-				dollars += Number(aaData[y][1])*0.31;
+				dollars += Number(aaData[y][1])*0.33;
 				break;
 			case 'MXN':
-				dollars += Number(aaData[y][1])*0.065;
+				dollars += Number(aaData[y][1])*0.066;
 				break;
 			case 'AUD':
 				dollars += Number(aaData[y][1])*0.76;
