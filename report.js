@@ -10,7 +10,7 @@ var currentReport = {
 	count: 14,
 	books: ASINs,
 	currency: "USD",
-	borrowRate: 1.41
+	borrowRate: 1.355
 }
 var loading = 0;
 $('#loading').css('display', 'none');
