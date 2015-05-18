@@ -37,14 +37,14 @@ if (!Array.prototype.reduce) {
     var BORROW_RATE = 1.355;
     var EXCHANGE_RATE = {
         "USD": 1,
-        "GBP": 1.48,
-        "EUR": 1.06,
-        "JPY": 0.0082,
+        "GBP": 1.57,
+        "EUR": 1.14,
+        "JPY": 0.0083,
         "INR": 0.016,
-        "CAD": 0.78,
-        "BRL": 0.31,
-        "MXN": 0.065,
-        "AUD": 0.76
+        "CAD": 0.82,
+        "BRL": 0.33,
+        "MXN": 0.066,
+        "AUD": 0.80
     };
 
     var customerId = /customerID": "([A-Z0-9]+)"/i.exec(init.toString()).slice(-1)[0];
