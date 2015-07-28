@@ -2,7 +2,7 @@ $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://thro
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
 var intervalInMinutes = 5;
-var borrowRate = 1.355;
+var pageRate = 0.0058;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
@@ -20,7 +20,7 @@ function fetch() {
 		},
 		success: function(data) {
 			data = JSON.parse(data);
-			var dollars = aaDataToUSD(data.aaData, data.borrowData[0]);
+			var dollars = aaDataToUSD(data.aaData, data.pagesData[0]);
 			var str = '$' + Number(dollars).toFixed(2);
       console.log(str);
 			$('td').html(str);
@@ -31,7 +31,7 @@ function fetch() {
 	});
 }
 
-function aaDataToUSD(aaData, borrowCount) {
+function aaDataToUSD(aaData, pageCount) {
 	dollars = 0;
 	for (var y = 0; y < aaData.length; y += 1) {
 		switch (aaData[y][2]) {
@@ -39,32 +39,32 @@ function aaDataToUSD(aaData, borrowCount) {
 				dollars += Number(aaData[y][1]);
 				break;
 			case 'GBP':
-				dollars += Number(aaData[y][1])*1.57;
+				dollars += Number(aaData[y][1])*1.56;
 				break;
 			case 'EUR':
-				dollars += Number(aaData[y][1])*1.14;
+				dollars += Number(aaData[y][1])*1.11;
 				break;
 			case 'JPY':
-				dollars += Number(aaData[y][1])*0.0083;
+				dollars += Number(aaData[y][1])*0.0081;
 				break;
 			case 'INR':
 				dollars += Number(aaData[y][1])*0.016;
 				break;
 			case 'CAD':
-				dollars += Number(aaData[y][1])*0.82;
+				dollars += Number(aaData[y][1])*0.77;
 				break;
 			case 'BRL':
-				dollars += Number(aaData[y][1])*0.33;
+				dollars += Number(aaData[y][1])*0.30;
 				break;
 			case 'MXN':
-				dollars += Number(aaData[y][1])*0.066;
+				dollars += Number(aaData[y][1])*0.061;
 				break;
 			case 'AUD':
-				dollars += Number(aaData[y][1])*0.80;
+				dollars += Number(aaData[y][1])*0.73;
 				break;
 		}
 	}
-	dollars += borrowRate*borrowCount;
+	dollars += pageRate*pageCount;
 	return dollars;
 }
 
@@ -73,4 +73,4 @@ function sizeText() {
 };
 
 fetch();
-setInterval(fetch, intervalInMinutes*60*1000);
+setInterval(fetch, intervalInMinutes*60*1000); 
