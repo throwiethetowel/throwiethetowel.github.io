@@ -66,6 +66,7 @@ function aaDataToUSD(aaData, pageCount) {
 	}
 	dollars += pageRate*pageCount;
 	return dollars;
+	return pageCount;
 }
 
 function sizeText() {
