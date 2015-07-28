@@ -21,7 +21,7 @@ function fetch() {
 		success: function(data) {
 			data = JSON.parse(data);
 			var dollars = aaDataToUSD(data.aaData, data.pagesData[0]);
-			var str = 'Pages Read ' + Number(dollars).toFixed(2);
+			var str = 'Pages Read ' + Number(dollars).toFixed(0);
       console.log(str);
 			$('td').html(str);
 		},
