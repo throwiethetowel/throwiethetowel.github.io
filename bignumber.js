@@ -2,7 +2,7 @@ $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://thro
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
 var intervalInMinutes = 5;
-var pageRate = 0.0058;
+var pageRate = 0.00507;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
@@ -39,28 +39,28 @@ function aaDataToUSD(aaData, pageCount) {
 				dollars += Number(aaData[y][1]);
 				break;
 			case 'GBP':
-				dollars += Number(aaData[y][1])*1.56;
+				dollars += Number(aaData[y][1])*1.54;
 				break;
 			case 'EUR':
 				dollars += Number(aaData[y][1])*1.11;
 				break;
 			case 'JPY':
-				dollars += Number(aaData[y][1])*0.0081;
+				dollars += Number(aaData[y][1])*0.0083;
 				break;
 			case 'INR':
-				dollars += Number(aaData[y][1])*0.016;
+				dollars += Number(aaData[y][1])*0.015;
 				break;
 			case 'CAD':
-				dollars += Number(aaData[y][1])*0.77;
+				dollars += Number(aaData[y][1])*0.76;
 				break;
 			case 'BRL':
-				dollars += Number(aaData[y][1])*0.30;
+				dollars += Number(aaData[y][1])*0.26;
 				break;
 			case 'MXN':
 				dollars += Number(aaData[y][1])*0.061;
 				break;
 			case 'AUD':
-				dollars += Number(aaData[y][1])*0.73;
+				dollars += Number(aaData[y][1])*0.72;
 				break;
 		}
 	}
