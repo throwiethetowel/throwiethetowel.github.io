@@ -1,5 +1,3 @@
-// Production steps of ECMA-262, Edition 5, 15.4.4.21
-// Reference: http://es5.github.io/#x15.4.4.21
 if (!Array.prototype.reduce) {
   Array.prototype.reduce = function(callback /*, initialValue*/) {
     'use strict';
