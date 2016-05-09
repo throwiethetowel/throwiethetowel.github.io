@@ -78,6 +78,11 @@ if (!Array.prototype.reduce) {
         $('body').append(Handlebars.templates['index.tmpl']({ host: host }));
 
         renderSalesWidget(books, "today", today, today, 4).then(function() {
+        renderSalesWidget(books, "yesterday", yesterday, yesterday, 4).then(function() {
+        renderSalesWidget(books, "mtd", firstOfMonth, today, 8).then(function() {
+        renderSalesWidget(books, "priormonth", firstOfLastMonth, lastOfLastMonth, 8);
+        }); }); });
+
     });
 
 
