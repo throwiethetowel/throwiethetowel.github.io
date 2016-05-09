@@ -34,7 +34,7 @@ if (!Array.prototype.reduce) {
     var host = "https://throwiethetowel.github.io/static/";
     //host = "http://localhost:5555/";
 
-    var BORROW_RATE = 1.355;
+    var BORROW_RATE = 0.004779;
     var EXCHANGE_RATE = {
         "USD": 1,
         "GBP": 1.57,
@@ -138,7 +138,7 @@ if (!Array.prototype.reduce) {
             }
         }).pipe(function(data) {
             data = JSON.parse(data);
-            var borrows = data.borrowData.reduce(sum, 0);
+            var borrows = data.pagesData.reduce(sum, 0);
             var sales = data.orderData.reduce(sum, 0);
             return {
                 asin: book.asin,
