@@ -1,8 +1,8 @@
 $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://throwiethetowel.github.io/bignumbercss.css\">');
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
-var intervalInMinutes = 5;
-var pageRate = 0.004778;
+var intervalInMinutes = 1;
+var pageRate = 0.0049566;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
@@ -39,13 +39,13 @@ function aaDataToUSD(aaData, pageCount) {
 				dollars += Number(aaData[y][1]);
 				break;
 			case 'GBP':
-				dollars += Number(aaData[y][1])*1.44;
+				dollars += Number(aaData[y][1])*1.46;
 				break;
 			case 'EUR':
-				dollars += Number(aaData[y][1])*1.14;
+				dollars += Number(aaData[y][1])*1.12;
 				break;
 			case 'JPY':
-				dollars += Number(aaData[y][1])*0.0093;
+				dollars += Number(aaData[y][1])*0.0091;
 				break;
 			case 'INR':
 				dollars += Number(aaData[y][1])*0.015;
@@ -54,13 +54,13 @@ function aaDataToUSD(aaData, pageCount) {
 				dollars += Number(aaData[y][1])*0.77;
 				break;
 			case 'BRL':
-				dollars += Number(aaData[y][1])*0.29;
+				dollars += Number(aaData[y][1])*0.28;
 				break;
 			case 'MXN':
-				dollars += Number(aaData[y][1])*0.056;
+				dollars += Number(aaData[y][1])*0.054;
 				break;
 			case 'AUD':
-				dollars += Number(aaData[y][1])*0.74;
+				dollars += Number(aaData[y][1])*0.72;
 				break;
 		}
 	}
