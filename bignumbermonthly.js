@@ -1,8 +1,8 @@
 $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://throwiethetowel.github.io/bignumbercss.css\">');
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
-var intervalInMinutes = 5;
-var borrowRate = 1.355;
+var intervalInMinutes = 2;
+var borrowRate = 0.0049566;
 
 function fetch() {
 	var custID = init.toString().substr(init.toString().indexOf('customerID')+14).split('\"')[0];
@@ -22,8 +22,8 @@ function fetch() {
 		success: function(data) {
 			data = JSON.parse(data);
 			var borrows = 0;
-			for (var x = 0; x < data.borrowData.length; x += 1) {
-			  borrows += data.borrowData[x];
+			for (var x = 0; x < data.pagesData.length; x += 1) {
+			  borrows += data.pagesData[x];
 			}
 			var dollars = aaDataToUSD(data.aaData, borrows);
 			var str = '$' + Number(dollars).toFixed(2);
