@@ -32,7 +32,7 @@ if (!Array.prototype.reduce) {
     var host = "https://throwiethetowel.github.io/static/";
     //host = "http://localhost:5555/";
 
-    var BORROW_RATE = 0.004779;
+    var BORROW_RATE = 0.0049566;
     var EXCHANGE_RATE = {
         "USD": 1,
         "GBP": 1.44,
