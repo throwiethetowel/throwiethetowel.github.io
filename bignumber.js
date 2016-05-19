@@ -1,7 +1,7 @@
 $('head').append('<link rel=\"stylesheet\" type=\"text/css\" href=\"https://throwiethetowel.github.io/bignumbercss.css\">');
 $('body').html('<table id=\"td\"><tr><td></td></tr></table>');
 
-var intervalInMinutes = 1;
+var intervalInMinutes = 2;
 var pageRate = 0.0049566;
 
 function fetch() {
